@@ -1,44 +1,18 @@
 /* ==========================================================================
-   Nate's PM Portfolio — Main JavaScript
-   Theme toggle, mobile nav, scroll animations, back-to-top
+   Nate Burger — Main JavaScript
+   Mobile nav, scroll animations, back-to-top, header state
    ========================================================================== */
 
 (function () {
   'use strict';
 
-  // ---------- Theme Toggle ----------
-  const themeToggle = document.querySelector('.theme-toggle');
-  const root = document.documentElement;
-
-  function getPreferredTheme() {
-    const stored = localStorage.getItem('theme');
-    if (stored) return stored;
-    // Default to dark
-    return 'dark';
-  }
-
-  function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }
-
-  // Initialize theme
-  setTheme(getPreferredTheme());
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
-      const current = root.getAttribute('data-theme');
-      setTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  }
-
   // ---------- Mobile Navigation ----------
-  const navToggle = document.querySelector('.nav-toggle');
-  const mobileNav = document.querySelector('.mobile-nav');
+  var navToggle = document.querySelector('.nav-toggle');
+  var mobileNav = document.querySelector('.mobile-nav');
 
   if (navToggle && mobileNav) {
     navToggle.addEventListener('click', function () {
-      const isOpen = navToggle.classList.toggle('active');
+      var isOpen = navToggle.classList.toggle('active');
       navToggle.setAttribute('aria-expanded', isOpen);
 
       if (isOpen) {
@@ -50,7 +24,6 @@
       }
     });
 
-    // Close mobile nav when a link is clicked
     mobileNav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navToggle.classList.remove('active');
@@ -84,7 +57,6 @@
       observer.observe(el);
     });
   } else {
-    // Fallback: just show everything
     animatedElements.forEach(function (el) {
       el.classList.add('visible');
     });
@@ -140,17 +112,22 @@
     );
   }
 
-  // ---------- Header Background on Scroll ----------
+  // ---------- Header State: dark on hero, light after ----------
   var header = document.querySelector('.site-header');
+  var hero = document.querySelector('.hero');
 
-  if (header) {
+  if (header && hero) {
+    // Start dark (over hero)
+    header.classList.add('header-dark');
+
     window.addEventListener(
       'scroll',
       function () {
-        if (window.scrollY > 10) {
-          header.style.borderBottomColor = 'var(--color-border)';
+        var heroBottom = hero.offsetTop + hero.offsetHeight - 80;
+        if (window.scrollY > heroBottom) {
+          header.classList.remove('header-dark');
         } else {
-          header.style.borderBottomColor = 'transparent';
+          header.classList.add('header-dark');
         }
       },
       { passive: true }
