@@ -17,28 +17,24 @@
 
 ```
 /
-├── index.html              # Homepage
+├── index.html                              # Homepage (hero, resume, AI showcase, blog preview)
 ├── blog/
-│   ├── index.html          # Blog listing / index page
-│   ├── template.html       # Blog post template (copy this to create new posts)
-│   └── *.html              # Individual blog post files
+│   ├── index.html                          # Blog listing page
+│   ├── template.html                       # Blog post template (copy for new posts)
+│   ├── ai-powered-prds.html                # Post: AI-powered PRD writing
+│   ├── extensible-product-architectures.html # Post: Extensible WMS architectures
+│   └── brad-to-prd-framework.html          # Post: BRAD-to-PRD framework
 ├── assets/
 │   ├── css/
-│   │   └── styles.css      # Main stylesheet
+│   │   └── styles.css                      # All styles — mobile-first, dark mode default
 │   ├── js/
-│   │   └── main.js         # Main JavaScript (theme toggle, interactions)
-│   └── images/
-│       └── *.webp / *.png  # All images — use descriptive filenames for SEO
-├── resume.html             # Resume / CV page
-├── sitemap.xml             # XML sitemap for search engines
-├── robots.txt              # Robots directive
-├── favicon.ico             # Favicon
-├── CNAME                   # Custom domain config (if applicable)
-├── CLAUDE.md               # This file — project memory
-└── README.md               # Repo readme
+│   │   └── main.js                         # Theme toggle, mobile nav, scroll animations
+│   └── images/                             # All images — use descriptive filenames for SEO
+├── sitemap.xml                             # XML sitemap for search engines
+├── robots.txt                              # Robots directive
+├── CLAUDE.md                               # This file — project memory
+└── README.md                               # Repo readme
 ```
-
-> **Note:** This structure is the target layout. Update this section as files are actually created.
 
 ---
 
@@ -46,42 +42,46 @@
 
 ### Color Palette
 
-| Token               | Light Mode | Dark Mode  | Usage                   |
-|----------------------|-----------|------------|-------------------------|
-| `--color-bg`         | TBD       | TBD        | Page background          |
-| `--color-surface`    | TBD       | TBD        | Card / section background|
-| `--color-text`       | TBD       | TBD        | Primary body text        |
-| `--color-text-muted` | TBD       | TBD        | Secondary / subtle text  |
-| `--color-primary`    | TBD       | TBD        | Links, buttons, accents  |
-| `--color-primary-hover`| TBD     | TBD        | Hover state for primary  |
-| `--color-border`     | TBD       | TBD        | Borders and dividers     |
-
-> **Action:** Fill in exact hex values once the design is finalized during site creation.
+| Token                    | Dark Mode (default)            | Light Mode                     | Usage                    |
+|--------------------------|-------------------------------|-------------------------------|--------------------------|
+| `--color-bg`             | `#0a0f1c` (deep navy)         | `#ffffff`                      | Page background          |
+| `--color-surface`        | `#111827`                      | `#f8fafc`                      | Card / section background|
+| `--color-surface-raised` | `#1a2332`                      | `#f1f5f9`                      | Elevated surface         |
+| `--color-text`           | `#f1f5f9`                      | `#0f172a`                      | Primary body text        |
+| `--color-text-muted`     | `#94a3b8`                      | `#475569`                      | Secondary / subtle text  |
+| `--color-primary`        | `#3b82f6` (blue)               | `#2563eb`                      | Links, buttons, accents  |
+| `--color-primary-hover`  | `#60a5fa`                      | `#1d4ed8`                      | Hover state for primary  |
+| `--color-primary-subtle` | `rgba(59, 130, 246, 0.12)`     | `rgba(37, 99, 235, 0.08)`     | Subtle primary background|
+| `--color-border`         | `#1e293b`                      | `#e2e8f0`                      | Borders and dividers     |
+| `--color-accent`         | `#a78bfa` (purple)             | `#7c3aed`                      | Gradient accent          |
+| `--color-success`        | `#34d399`                      | `#059669`                      | Status indicators        |
+| `--color-code-bg`        | `#1e293b`                      | `#f1f5f9`                      | Code block background    |
 
 ### Typography
 
-- **Heading font:** TBD (e.g., system font stack or Google Fonts choice)
-- **Body font:** TBD
-- **Monospace font:** TBD (for code snippets)
-- **Base font size:** TBD (e.g., 16px / 1rem)
-- **Line height:** TBD (e.g., 1.6 for body)
-- **Font scale:** TBD (e.g., h1: 2.5rem, h2: 2rem, h3: 1.5rem)
+- **Font stack:** `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif`
+- **Monospace:** `'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace`
+- **Base font size:** 16px (1rem)
+- **Line height:** 1.6 (body), 1.2 (headings), 1.8 (loose / blog content)
+- **Font scale:** sm: 0.875rem, base: 1rem, lg: 1.125rem, xl: 1.25rem, 2xl: 1.5rem, 3xl: 2rem, 4xl: 2.5rem, 5xl: 3.25rem
+- **Font weights used:** 400 (regular), 500 (medium), 600 (semibold), 700 (bold), 800 (extra-bold)
 
 ### Spacing & Sizing
 
-- **Container max-width:** TBD (e.g., 1200px)
-- **Content max-width:** TBD (e.g., 720px for blog post body)
-- **Section padding:** TBD
-- **Card gap / grid gap:** TBD
-- **Border radius:** TBD
+- **Container max-width:** 1200px
+- **Content max-width:** 720px (blog post body)
+- **Header height:** 72px
+- **Spacing scale:** xs: 0.25rem, sm: 0.5rem, md: 1rem, lg: 1.5rem, xl: 2rem, 2xl: 3rem, 3xl: 4rem, 4xl: 6rem
+- **Border radius:** sm: 6px, md: 10px, lg: 16px
+- **Transitions:** fast: 150ms, base: 250ms, slow: 400ms
 
 ### Dark Mode / Light Mode
 
-- Theme toggle via JavaScript; preference stored in `localStorage`.
-- CSS uses custom properties (variables) scoped under `:root` (light) and `[data-theme="dark"]` or a `.dark` class.
+- **Default theme:** Dark mode
+- Theme toggle via JavaScript; preference stored in `localStorage` under key `theme`.
+- CSS uses custom properties scoped under `:root` (dark default) and `[data-theme="light"]` override.
 - Variable names follow the pattern `--color-*` as listed above.
-
-> **Action:** Update all TBD values in this section as soon as the stylesheet is created.
+- Responsive breakpoints: 640px, 768px, 1024px, 1200px
 
 ---
 
@@ -118,7 +118,7 @@ Every page **must** include:
 ### CSS
 
 - Mobile-first responsive approach.
-- Breakpoints: TBD (e.g., 768px, 1024px).
+- Breakpoints: 640px (sm), 768px (md), 1024px (lg), 1200px (xl).
 - No external CSS dependencies unless absolutely necessary.
 
 ### JavaScript
@@ -198,29 +198,34 @@ Every page **must** include:
 
 - [x] Repository created
 - [x] CLAUDE.md project memory established
-
-### In Progress
-
-- [ ] Initial site build (homepage, styles, layout)
+- [x] Homepage (`index.html`) — hero, resume, AI showcase, blog preview sections
+- [x] Global stylesheet (`assets/css/styles.css`) — mobile-first, dark mode default
+- [x] JavaScript (`assets/js/main.js`) — theme toggle, mobile nav, scroll animations, back-to-top
+- [x] Dark/light theme toggle with localStorage persistence
+- [x] Blog index page (`blog/index.html`)
+- [x] Blog post template (`blog/template.html`)
+- [x] Blog post: "How I Use AI to Write Better PRDs in Half the Time"
+- [x] Blog post: "Building Extensible Product Architectures for WMS"
+- [x] Blog post: "From BRAD to PRD: My Framework for Turning Business Requirements into Shipping Products"
+- [x] AI Showcase section with 4 project cards
+- [x] Resume / Experience section with skills and timeline
+- [x] `sitemap.xml`
+- [x] `robots.txt`
+- [x] `README.md` with project docs and blog post instructions
+- [x] Full SEO: meta tags, Open Graph, Twitter Cards, JSON-LD on every page
 
 ### Planned
 
-- [ ] Homepage (`index.html`)
-- [ ] Global stylesheet (`assets/css/styles.css`)
-- [ ] Dark/light theme toggle
-- [ ] Blog index page (`blog/index.html`)
-- [ ] Blog post template (`blog/template.html`)
-- [ ] First blog post
-- [ ] Resume page (`resume.html`)
-- [ ] AI portfolio / showcase section
-- [ ] `sitemap.xml`
-- [ ] `robots.txt`
 - [ ] Favicon
+- [ ] Professional headshot (replace placeholder)
+- [ ] Real project screenshots for AI showcase cards
+- [ ] Resume PDF download (replace placeholder link)
 - [ ] Google Analytics integration
 - [ ] RSS feed (`feed.xml`)
 - [ ] Newsletter signup form
 - [ ] Additional blog posts
-- [ ] Real project screenshots for AI showcase section
+- [ ] Custom domain + CNAME file
+- [ ] OG image (`assets/images/og-image.png`)
 
 ---
 
@@ -228,7 +233,22 @@ Every page **must** include:
 
 > Append a dated entry after each Claude Code session documenting what was changed or added.
 
-### 2026-02-17
+### 2026-02-17 — Session 1
 
-- **Created `CLAUDE.md`** — Initial project memory file with all sections: project overview, file structure, design system (TBD values to be filled during site build), key conventions, SEO keywords, blog post workflow, roadmap, and session notes.
-- Repository is brand new (empty). All file structure and design system values are documented as targets and will be updated as the site is built.
+- **Created `CLAUDE.md`** — Initial project memory file with all sections.
+
+### 2026-02-17 — Session 2 (Full Site Build)
+
+- **Built complete site from scratch** — all static HTML/CSS/JS, no frameworks.
+- **`index.html`** — Homepage with hero section (headline, description, CTA), resume/experience section (timeline + skill tags), AI showcase (4 project cards), blog preview (3 post cards), sticky header, footer.
+- **`assets/css/styles.css`** — Full stylesheet with CSS custom properties, dark mode default, light mode override, mobile-first responsive design (breakpoints: 640/768/1024/1200px), scroll animations, blog post layout, print styles.
+- **`assets/js/main.js`** — Theme toggle (localStorage), mobile nav hamburger, IntersectionObserver scroll animations, back-to-top button, active nav link highlighting.
+- **`blog/index.html`** — Blog listing page with 3 post cards.
+- **`blog/template.html`** — Blog post template with clearly marked placeholder sections for metadata and content.
+- **`blog/ai-powered-prds.html`** — Full blog post with substantive content about AI-powered PRD writing workflows.
+- **`blog/extensible-product-architectures.html`** — Full blog post about extensible architecture patterns for WMS.
+- **`blog/brad-to-prd-framework.html`** — Full blog post about the BRAD-to-PRD translation framework.
+- **`sitemap.xml`** — XML sitemap with all 5 pages.
+- **`robots.txt`** — Allow all, sitemap reference.
+- **`README.md`** — Project documentation with structure, blog post instructions, tech stack.
+- **Updated `CLAUDE.md`** — Filled in all design system values (colors, typography, spacing), updated file structure, marked roadmap items complete.
