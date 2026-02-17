@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>From BRAD to PRD: My Framework for Turning Business Requirements into Shipping Products — Nate Burger</title>
-  <meta name="description" content="A structured framework for transforming business requirements analysis documents into actionable product specs that engineering teams can build from.">
+  <title>From BRD to PRD: Turning Business Requirements into Shipping Products — Nate Burger</title>
+  <meta name="description" content="A structured framework for transforming business requirements documents into actionable product specs that engineering teams can build from.">
   <meta name="author" content="Nate Burger">
   <link rel="canonical" href="https://ndburger.github.io/testt/blog/brad-to-prd-framework.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="From BRAD to PRD: Turning Business Requirements into Shipping Products">
-  <meta property="og:description" content="A structured framework for transforming business requirements analysis into actionable product specs.">
+  <meta property="og:title" content="From BRD to PRD: Turning Business Requirements into Shipping Products">
+  <meta property="og:description" content="A structured framework for transforming business requirements into actionable product specs.">
   <meta property="og:url" content="https://ndburger.github.io/testt/blog/brad-to-prd-framework.html">
   <meta property="og:image" content="https://ndburger.github.io/testt/assets/images/og-image.png">
   <meta property="og:site_name" content="Nate Burger">
@@ -21,8 +21,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="From BRAD to PRD: Turning Business Requirements into Shipping Products">
-  <meta name="twitter:description" content="A structured framework for transforming business requirements analysis into actionable product specs.">
+  <meta name="twitter:title" content="From BRD to PRD: Turning Business Requirements into Shipping Products">
+  <meta name="twitter:description" content="A structured framework for transforming business requirements into actionable product specs.">
   <meta name="twitter:image" content="https://ndburger.github.io/testt/assets/images/og-image.png">
 
   <!-- JSON-LD BlogPosting -->
@@ -30,8 +30,8 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "From BRAD to PRD: My Framework for Turning Business Requirements into Shipping Products",
-    "description": "A structured framework for transforming business requirements analysis documents into actionable product specs that engineering teams can build from.",
+    "headline": "From BRD to PRD: Turning Business Requirements into Shipping Products",
+    "description": "A structured framework for transforming business requirements documents into actionable product specs that engineering teams can build from.",
     "datePublished": "2025-12-18",
     "dateModified": "2025-12-18",
     "author": {
@@ -48,7 +48,7 @@
       "@id": "https://ndburger.github.io/testt/blog/brad-to-prd-framework.html"
     },
     "image": "https://ndburger.github.io/testt/assets/images/og-image.png",
-    "keywords": ["business requirements analysis", "PRD writing", "product management", "BRAD", "product requirements document"]
+    "keywords": ["business requirements document", "PRD writing", "product management", "BRD", "product requirements document"]
   }
   </script>
 
@@ -98,22 +98,22 @@
             <span>&middot;</span>
             <span>8 min read</span>
           </div>
-          <h1>From BRAD to PRD: My Framework for Turning Business Requirements into Shipping Products</h1>
+          <h1>From BRD to PRD: Turning Business Requirements into Shipping Products</h1>
         </header>
       </div>
 
       <div class="blog-post-content fade-in">
-        <p>Every product manager has experienced this: a business stakeholder hands you a document full of requirements, and you need to turn it into something an engineering team can actually build. The gap between a business requirements analysis document (BRAD) and a product requirements document (PRD) is where most miscommunication happens — and where most projects go sideways.</p>
+        <p>Every product manager has experienced this: a business stakeholder hands you a document full of requirements, and you need to turn it into something an engineering team can actually build. The gap between a business requirements document (BRD) and a product requirements document (PRD) is where most miscommunication happens — and where most projects go sideways.</p>
 
-        <p>Over the past few years at Logiwa, I've developed a structured framework for bridging that gap. It's not rocket science, but it's repeatable, and it's saved me from shipping the wrong thing more times than I can count.</p>
+        <p>Over the years, I've developed a structured framework for bridging that gap. It's not rocket science, but it's repeatable, and it's saved me from shipping the wrong thing more times than I can count.</p>
 
         <h2>Why the Gap Exists</h2>
 
-        <p>Business requirements and product requirements speak different languages. A BRAD says "we need to improve order accuracy." A PRD says "when an operator scans an item that doesn't match the order, display a red warning and prevent the pack from being completed until the correct item is scanned."</p>
+        <p>Business requirements and product requirements speak different languages. A BRD says "we need to improve order accuracy." A PRD says "when a user encounters a data mismatch, display a warning and prevent the action from completing until the issue is resolved."</p>
 
-        <p>The BRAD defines <em>what the business needs</em>. The PRD defines <em>what the product does</em>. The PM's job is to be the translator.</p>
+        <p>The BRD defines <em>what the business needs</em>. The PRD defines <em>what the product does</em>. The PM's job is to be the translator.</p>
 
-        <h2>The BRAD-to-PRD Framework</h2>
+        <h2>The BRD-to-PRD Framework</h2>
 
         <p>Here's the five-step process I follow for every feature that starts as a business requirement.</p>
 
@@ -122,13 +122,13 @@
         <p>Most business requirements are actually bundles of smaller requirements. "Improve order accuracy" might include:</p>
 
         <ul>
-          <li>Scan verification at pack station</li>
-          <li>Real-time inventory discrepancy alerts</li>
+          <li>Input validation at key process steps</li>
+          <li>Real-time discrepancy alerts</li>
           <li>Quality check workflows for high-value items</li>
           <li>Reporting dashboards for accuracy metrics</li>
         </ul>
 
-        <p>I start by breaking the BRAD into atomic requirements — the smallest units of business value that can be delivered independently. This immediately makes scope manageable and helps with prioritization.</p>
+        <p>I start by breaking the BRD into atomic requirements — the smallest units of business value that can be delivered independently. This immediately makes scope manageable and helps with prioritization.</p>
 
         <h3>Step 2: Map to User Workflows</h3>
 
@@ -141,18 +141,18 @@
         <p>Each workflow step gets acceptance criteria written in Given-When-Then format:</p>
 
         <ul>
-          <li><strong>Given</strong> an operator is at the pack station with order #1234 open</li>
-          <li><strong>When</strong> they scan an item barcode that doesn't match any line item in the order</li>
-          <li><strong>Then</strong> the system displays a red "Item Mismatch" warning, plays an audible alert, and prevents the pack-complete action until the correct item is scanned or a supervisor override is entered</li>
+          <li><strong>Given</strong> a user is on the processing screen with record #1234 open</li>
+          <li><strong>When</strong> they enter data that doesn't match the expected values</li>
+          <li><strong>Then</strong> the system displays a red warning, prevents the action from completing, and requires correction or a supervisor override</li>
         </ul>
 
-        <p>This level of specificity is what engineering needs. It's also where you catch the edge cases — what happens if the barcode is unreadable? What if the item is a substitute? What if the order was modified after picking started?</p>
+        <p>This level of specificity is what engineering needs. It's also where you catch the edge cases — what happens with bad input data? What if a substitution was made? What if the record was modified after the process started?</p>
 
         <h3>Step 4: Trace Back to the Business Requirement</h3>
 
-        <p>This is the step most PMs skip, and it's the most important one for stakeholder trust. Every acceptance criterion in your PRD should trace back to a specific business requirement in the BRAD.</p>
+        <p>This is the step most PMs skip, and it's the most important one for stakeholder trust. Every acceptance criterion in your PRD should trace back to a specific business requirement in the BRD.</p>
 
-        <p>I use a simple traceability matrix — a table that maps each BRAD requirement to the corresponding PRD sections, user stories, and acceptance criteria. When a stakeholder asks "did you include the thing I asked for?" I can point to exactly where it lives in the spec.</p>
+        <p>I use a simple traceability matrix — a table that maps each BRD requirement to the corresponding PRD sections, user stories, and acceptance criteria. When a stakeholder asks "did you include the thing I asked for?" I can point to exactly where it lives in the spec.</p>
 
         <blockquote>
           <p>Traceability isn't bureaucracy — it's insurance. It protects you when scope creep tries to sneak in, and it gives stakeholders confidence that their needs were heard.</p>
@@ -164,7 +164,7 @@
 
         <ol>
           <li><strong>Business validation</strong> — Walk the stakeholder through the PRD and confirm that every business requirement is addressed. This isn't a rubber stamp; it's a real review where they can flag gaps.</li>
-          <li><strong>Technical validation</strong> — Walk engineering through the PRD and confirm feasibility. This is where you learn that the "simple" barcode scan actually requires a new hardware integration, or that the real-time alert needs a WebSocket connection that doesn't exist yet.</li>
+          <li><strong>Technical validation</strong> — Walk engineering through the PRD and confirm feasibility. This is where you learn that the "simple" feature actually requires a new integration, or that a real-time capability needs infrastructure that doesn't exist yet.</li>
         </ol>
 
         <p>These reviews almost always surface issues. Better to find them in a document review than in a sprint demo.</p>
@@ -174,9 +174,9 @@
         <p>A few tools and practices that make this framework smoother:</p>
 
         <ul>
-          <li><strong>Jira Product Discovery</strong> — for capturing and prioritizing the atomic requirements from Step 1</li>
-          <li><strong>Claude / AI assistants</strong> — for generating first-draft acceptance criteria and edge cases (see my post on <a href="ai-powered-prds.html">AI-powered PRDs</a>)</li>
-          <li><strong>Traceability tables</strong> — even a simple spreadsheet mapping BRAD items to PRD sections</li>
+          <li><strong>Discovery tools</strong> — for capturing and prioritizing the atomic requirements from Step 1</li>
+          <li><strong>AI assistants</strong> — for generating first-draft acceptance criteria and edge cases (see my post on <a href="ai-powered-prds.html">AI-powered PRDs</a>)</li>
+          <li><strong>Traceability tables</strong> — even a simple spreadsheet mapping BRD items to PRD sections</li>
           <li><strong>Workflow diagrams</strong> — for complex multi-step processes, a visual flow catches gaps that prose misses</li>
         </ul>
 
@@ -190,7 +190,7 @@
           <li><strong>You ship the right thing</strong> — because you've validated from both the business and technical side before writing a line of code.</li>
         </ol>
 
-        <p>The BRAD-to-PRD gap is where products succeed or fail. Having a repeatable framework for crossing it is one of the most valuable tools in a product manager's toolkit.</p>
+        <p>The BRD-to-PRD gap is where products succeed or fail. Having a repeatable framework for crossing it is one of the most valuable tools in a product manager's toolkit.</p>
       </div>
     </article>
 
