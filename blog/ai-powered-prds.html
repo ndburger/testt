@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +55,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
@@ -63,7 +63,14 @@
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="../" class="logo">nate<span>.</span></a>
+      <a href="../" class="logo" aria-label="Nate Burger — Home">
+        <svg viewBox="0 0 80 44" aria-hidden="true" class="logo-mark">
+          <path class="logo-fill" d="M8 19 C8 7, 72 7, 72 19" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <text class="logo-fill" x="40" y="28" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="currentColor">NATE</text>
+          <text class="logo-fill" x="40" y="36.5" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="7" letter-spacing="3" fill="currentColor" opacity="0.5">BURGER</text>
+          <path class="logo-fill" d="M10 41 L70 41 C70 41, 68 44, 40 44 C12 44, 10 41, 10 41Z" fill="currentColor"/>
+        </svg>
+      </a>
       <nav class="nav-links" role="navigation" aria-label="Main navigation">
         <a href="../#about">About</a>
         <a href="../#experience">Resume</a>
@@ -71,10 +78,6 @@
         <a href="./" class="active">Blog</a>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" aria-label="Toggle dark/light mode">
-          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -103,7 +106,7 @@
       </div>
 
       <div class="blog-post-content fade-in">
-        <p>Writing product requirements documents used to be the most time-consuming part of my week. As a product manager at Logiwa, I'm responsible for translating complex warehouse management workflows into specs that engineering teams can build from. That means stakeholder interviews, edge case mapping, acceptance criteria — all of it. Then I started using AI as a writing partner, and my PRD workflow changed completely.</p>
+        <p>Writing product requirements documents used to be the most time-consuming part of my week. As a product manager, I'm responsible for translating complex business workflows into specs that engineering teams can build from. That means stakeholder interviews, edge case mapping, acceptance criteria — all of it. Then I started using AI as a writing partner, and my PRD workflow changed completely.</p>
 
         <p>This isn't about replacing the PM's judgment. It's about <strong>using AI to handle the structural heavy lifting</strong> so you can focus on the decisions that actually matter.</p>
 
@@ -147,7 +150,7 @@
 
         <h3>Step 4: Review and Refine</h3>
 
-        <p>The AI-generated draft is never the final product. I review every line, add domain context that only a human PM with warehouse management expertise would know, and adjust priorities based on business context. But I'm editing a complete document instead of staring at a blank page.</p>
+        <p>The AI-generated draft is never the final product. I review every line, add domain context that only a human PM with deep domain expertise would know, and adjust priorities based on business context. But I'm editing a complete document instead of staring at a blank page.</p>
 
         <h2>Results: What Changed</h2>
 
@@ -188,13 +191,21 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-content">
+        <div class="footer-logo">
+          <svg viewBox="0 0 80 44" aria-hidden="true">
+            <path d="M8 19 C8 7, 72 7, 72 19" stroke="#F5F0E8" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <text x="40" y="28" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="#F5F0E8">NATE</text>
+            <text x="40" y="36.5" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="7" letter-spacing="3" fill="#F5F0E8" opacity="0.5">BURGER</text>
+            <path d="M10 41 L70 41 C70 41, 68 44, 40 44 C12 44, 10 41, 10 41Z" fill="#F5F0E8"/>
+          </svg>
+        </div>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="../#about">About</a>
           <a href="../#experience">Resume</a>
           <a href="../#showcase">AI Showcase</a>
           <a href="./">Blog</a>
         </nav>
-        <p class="footer-copy">&copy; 2026 Nate Burger. Built with AI.</p>
+        <p class="footer-copy">&copy; 2026 Nate Burger.</p>
       </div>
     </div>
   </footer>
