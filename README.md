@@ -14,9 +14,9 @@ A static personal website and product management blog, built with HTML, CSS, and
 ├── blog/
 │   ├── index.html              # Blog listing page
 │   ├── template.html           # Blog post template — copy this for new posts
-│   ├── ai-powered-prds.html
-│   ├── extensible-product-architectures.html
-│   └── brad-to-prd-framework.html
+│   ├── build-vs-buy-ai-product-decisions.html
+│   ├── wms-product-management-prioritization.html
+│   └── agile-teams-organized-by-product.html
 ├── assets/
 │   ├── css/
 │   │   └── styles.css          # All styles — mobile-first, dark mode default

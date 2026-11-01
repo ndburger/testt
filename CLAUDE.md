@@ -21,9 +21,9 @@
 ├── blog/
 │   ├── index.html                          # Blog listing page
 │   ├── template.html                       # Blog post template (copy for new posts)
-│   ├── ai-powered-prds.html                # Post: AI-powered PRD writing
-│   ├── extensible-product-architectures.html # Post: Extensible WMS architectures
-│   └── brad-to-prd-framework.html          # Post: BRAD-to-PRD framework
+│   ├── build-vs-buy-ai-product-decisions.html # Post: Build vs buy for AI products
+│   ├── wms-product-management-prioritization.html # Post: WMS prioritization by operational impact
+│   └── agile-teams-organized-by-product.html # Post: Agile teams by product, not project
 ├── assets/
 │   ├── css/
 │   │   └── styles.css                      # All styles — mobile-first, dark mode default
@@ -204,7 +204,7 @@ Every page **must** include:
 - [x] Dark/light theme toggle with localStorage persistence
 - [x] Blog index page (`blog/index.html`)
 - [x] Blog post template (`blog/template.html`)
-- [x] Blog post: "How I Use AI to Write Better PRDs in Half the Time"
+- [x] Blog post: "How I Use AI to Write Better PRDs"
 - [x] Blog post: "Building Extensible Product Architectures for WMS"
 - [x] Blog post: "From BRAD to PRD: My Framework for Turning Business Requirements into Shipping Products"
 - [x] AI Showcase section with 4 project cards
@@ -252,3 +252,16 @@ Every page **must** include:
 - **`robots.txt`** — Allow all, sitemap reference.
 - **`README.md`** — Project documentation with structure, blog post instructions, tech stack.
 - **Updated `CLAUDE.md`** — Filled in all design system values (colors, typography, spacing), updated file structure, marked roadmap items complete.
+
+### 2026-11-01 — Session 3 (Remove fabricated content)
+
+- **Rule going forward:** only publish facts Nate has confirmed. No invented employers, dates, metrics, projects, or anecdotes.
+- **`index.html`** — Removed invented job history, dates, "30% reduction" stat, the four-card AI Showcase section (and its nav links), dead resume download link, and blog card dates. Resume section is now a minimal, undated entry awaiting real details.
+- **Blog posts** — Removed fabricated stats (6h→2.5h), publish dates, "real examples", and experience-duration claims; retitled "...in Half the Time" post to drop the unverified claim.
+- **Pending from Nate:** real resume details (employers, titles, dates, accomplishments), real projects for a showcase, headshot, resume PDF, real post dates.
+
+### 2026-11-01 — Session 3 (continued)
+
+- **Resume** — Replaced placeholder with real experience/education from Nate's resume PDF. Phone and email intentionally not published.
+- **Headshot** — Added `assets/images/nate-burger-headshot.jpg` to hero.
+- **Blog** — Replaced the three AI-written posts with posts grounded only in resume facts: `build-vs-buy-ai-product-decisions`, `wms-product-management-prioritization`, `agile-teams-organized-by-product`. Specific claims come from the resume; advice sections are general guidance and need Nate's review. Posts have no publish dates yet.

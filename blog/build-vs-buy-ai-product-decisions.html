@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Build vs. Buy for AI Products: A PM's Decision Framework — Nate Burger</title>
+  <meta name="description" content="A practical build-versus-buy framework for AI product management, drawn from leading an AI automation initiative in logistics.">
+  <meta name="author" content="Nate Burger">
+  <link rel="canonical" href="https://ndburger.github.io/testt/blog/build-vs-buy-ai-product-decisions.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Build vs. Buy for AI Products: A PM's Decision Framework">
+  <meta property="og:description" content="A practical build-versus-buy framework for AI product management.">
+  <meta property="og:url" content="https://ndburger.github.io/testt/blog/build-vs-buy-ai-product-decisions.html">
+  <meta property="og:image" content="https://ndburger.github.io/testt/assets/images/og-image.png">
+  <meta property="og:site_name" content="Nate Burger">
+  <meta property="article:author" content="Nate Burger">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Build vs. Buy for AI Products: A PM's Decision Framework">
+  <meta name="twitter:description" content="A practical build-versus-buy framework for AI product management.">
+  <meta name="twitter:image" content="https://ndburger.github.io/testt/assets/images/og-image.png">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Build vs. Buy for AI Products: A PM's Decision Framework",
+    "description": "A practical build-versus-buy framework for AI product management, drawn from leading an AI automation initiative in logistics.",
+    "author": {
+      "@type": "Person",
+      "name": "Nate Burger",
+      "url": "https://ndburger.github.io/testt/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Nate Burger"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ndburger.github.io/testt/blog/build-vs-buy-ai-product-decisions.html"
+    },
+    "image": "https://ndburger.github.io/testt/assets/images/og-image.png",
+    "keywords": ["AI product management", "build vs buy", "digital transformation", "product management", "KPIs"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../" class="logo" aria-label="Nate Burger — Home">
+        <svg viewBox="0 0 80 44" aria-hidden="true" class="logo-mark">
+          <path class="logo-fill" d="M8 19 C8 7, 72 7, 72 19" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <text class="logo-fill" x="40" y="28" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="currentColor">NATE</text>
+          <text class="logo-fill" x="40" y="36.5" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="7" letter-spacing="3" fill="currentColor" opacity="0.5">BURGER</text>
+          <path class="logo-fill" d="M10 41 L70 41 C70 41, 68 44, 40 44 C12 44, 10 41, 10 41Z" fill="currentColor"/>
+        </svg>
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="../#about">About</a>
+        <a href="../#experience">Resume</a>
+        <a href="./" class="active">Blog</a>
+      </nav>
+      <div class="header-actions">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="../#about">About</a>
+    <a href="../#experience">Resume</a>
+    <a href="./">Blog</a>
+  </nav>
+
+  <main>
+    <article>
+      <div class="container">
+        <header class="blog-post-header fade-in">
+          <div class="blog-post-meta">
+            <span>5 min read</span>
+          </div>
+          <h1>Build vs. Buy for AI Products: A PM's Decision Framework</h1>
+        </header>
+      </div>
+
+      <div class="blog-post-content fade-in">
+        <p>Whether to build an AI capability or buy one is one of the first decisions in AI product management, and it shapes the budget, the roadmap, and the team for years afterward. At Redwood Logistics, I led a digital transformation initiative to implement an automated AI system, which drove down cost per invoice by 15%, and I created a build-versus-buy model to evaluate long-term product sustainability and guide leadership on resource allocation. This post lays out the questions that kind of model should answer.</p>
+
+        <h2>Start With the Metric, Not the Model</h2>
+
+        <p>An AI project needs a number it is trying to move. For the Redwood initiative that number was cost per invoice. Choosing it up front gives you something to compare vendors against, and something to hold a custom build accountable to. If you can't name the metric, you aren't ready to compare options yet.</p>
+
+        <p>Pair the headline metric with product-health KPIs. At Redwood I introduced data-driven KPIs to monitor product health, which reduced audit time by 8% and shortened the cash conversion cycle. Those measures matter after launch, when the question changes from "should we do this" to "is it still working."</p>
+
+        <h2>The Build-vs-Buy Questions</h2>
+
+        <ol>
+          <li><strong>Is this differentiating?</strong> If the capability is part of what makes your product or business distinctive, building it is easier to justify. If it is table stakes, buying is usually faster.</li>
+          <li><strong>What is the time to value?</strong> A bought solution can start moving the metric sooner. A build may fit better but takes longer to pay back.</li>
+          <li><strong>What does ownership cost over time?</strong> Include maintenance, monitoring, model updates, and the engineers who would otherwise work on the roadmap. Resource allocation is where leadership usually needs the clearest numbers.</li>
+          <li><strong>What is the exit path?</strong> Check how hard it is to switch vendors, or to replace a custom build later.</li>
+          <li><strong>Who will operate it?</strong> An automated system still needs owners for exceptions, audits, and change requests.</li>
+        </ol>
+
+        <h2>Make the Decision Legible to Leadership</h2>
+
+        <p>The point of the model is not to produce the "right" answer. It is to put assumptions on the table so leadership can disagree with a specific input instead of a conclusion. Score each option on the same criteria, show the assumptions behind each score, and state what would change the recommendation.</p>
+
+        <h2>Plan for the Operating Model Too</h2>
+
+        <p>AI automation changes the work around it. Define how exceptions are handled, how outputs are audited, and who is accountable when the system is wrong. Auditability was part of why tracking audit time mattered as a KPI.</p>
+
+        <h2>Takeaways</h2>
+
+        <ul>
+          <li>Pick one metric the initiative must move, and measure it before and after.</li>
+          <li>Use a consistent build-versus-buy model so options are comparable.</li>
+          <li>Track product-health KPIs after launch, not just launch milestones.</li>
+          <li>Treat the operating model as part of the product.</li>
+        </ul>
+      </div>
+    </article>
+
+    <nav class="blog-post-nav" aria-label="Post navigation">
+      <a href="./">&larr; All Posts</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg viewBox="0 0 80 44" aria-hidden="true">
+            <path d="M8 19 C8 7, 72 7, 72 19" stroke="#F5F0E8" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <text x="40" y="28" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="#F5F0E8">NATE</text>
+            <text x="40" y="36.5" text-anchor="middle" font-family="'Larken','Playfair Display',Georgia,serif" font-weight="700" font-size="7" letter-spacing="3" fill="#F5F0E8" opacity="0.5">BURGER</text>
+            <path d="M10 41 L70 41 C70 41, 68 44, 40 44 C12 44, 10 41, 10 41Z" fill="#F5F0E8"/>
+          </svg>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="../#about">About</a>
+          <a href="../#experience">Resume</a>
+          <a href="./">Blog</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Nate Burger.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
