@@ -243,8 +243,15 @@ h3 {
   width: auto;
 }
 
-.site-header.header-dark .logo svg .logo-fill {
-  fill: var(--color-cream);
+/* Logo uses currentColor for both stroke (arc) and fill (text, bottom bun),
+   so switching the header theme only needs to change `color`. */
+.logo {
+  transition: color var(--transition-base);
+}
+
+.site-header.header-dark .logo,
+.site-header.header-dark .logo:hover {
+  color: var(--color-cream);
 }
 
 .nav-links {
